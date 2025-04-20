@@ -7,3 +7,18 @@ h1 {
     color: darkblue;
     text-align: center;
 }
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50; /* 綠色背景 */
+    color: white; /* 白色字 */
+    text-decoration: none; /* 移除底線 */
+    border-radius: 5px; /* 圓角 */
+    font-size: 16px;
+  }
+  
+  .button-link:hover {
+    background-color: #45a049; /* 滑鼠移過去變色 */
+  }
