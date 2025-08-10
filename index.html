@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, My name is William</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1 class="h1">覺得厲害</h1>
-    <p class="body">我是誰?</p>
-    <a href="./project1/" class="button-link">進入 Project1</a>
-  </body>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的個人網站</title>
+  <meta name="description" content="個人簡介、作品集與聯絡方式" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="styles.css" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">MySite</a>
+      <button id="menuBtn" class="menu-btn" aria-label="開啟選單">☰</button>
+      <ul id="navList" class="nav-list">
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#projects">作品集</a></li>
+        <li><a href="#contact">聯絡</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <h1>嗨，我是 Your Name</h1>
+      <p>這裡放一句你的簡短標語或研究主題。</p>
+      <a class="btn" href="#projects">看作品</a>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2>關於我</h2>
+      <p>簡述你的背景、研究興趣與目前在做的事。</p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>作品集</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>專案 A</h3>
+          <p>簡短介紹與連結。</p>
+          <a class="link" href="#" target="_blank" rel="noopener">查看</a>
+        </article>
+        <article class="card">
+          <h3>專案 B</h3>
+          <p>簡短介紹與連結。</p>
+          <a class="link" href="#" target="_blank" rel="noopener">查看</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>聯絡我</h2>
+      <!-- GitHub Pages 不支援 PHP，這裡示範用 Formspree 或你自己的 API -->
+      <form id="contactForm">
+        <label>您的 Email
+          <input type="email" name="email" required />
+        </label>
+        <label>訊息
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn" type="submit">送出</button>
+        <p id="formMsg" class="form-msg" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Your Name · Built with GitHub Pages</small>
+  </footer>
+</body>
 </html>
